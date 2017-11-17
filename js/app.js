@@ -1,5 +1,7 @@
+
+
 /*Función de lista desplegable*/
-var btn = document.getElementById('btn');
+var btn = document.getElementById('btn1');
 var cont = document.getElementById('container');
 btn.addEventListener('click', function(){
 	var selection = document.getElementById('select').value;
@@ -7,5 +9,5 @@ btn.addEventListener('click', function(){
 		alert('Elige una generación');
 		return false;
 	}
-	cont.innerHTML = '<p> Hola, el jugo seleccionado fue: ' + selection + '</p>';
+	cont.innerHTML = '<p> Hola, la generación seleccionada es: ' + selection + '</p>';
 })
