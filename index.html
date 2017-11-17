@@ -3,8 +3,215 @@
   <head>
     <meta charset="utf-8">
     <title>Data Dashboard</title>
+    <link href="https://fonts.googleapis.com/css?family=Questrial" rel="stylesheet">
+    <link rel="stylesheet" href="css/main.css">
   </head>
   <body>
+    <!-- Inicio header -->
+    <header>
+      <!-- Logo Laboratoria -->
+      <img id="logo" src="assets/images/logo-lab.png" alt="Logo Laboratoria">
+      <!-- botón filtro -->
+      <button id="btn1">Mostrar</button>
+      <!-- Menú desplegable por generación-->
+      <select id="select">
+        <option value="0">Seleccionar...</option>
+        <option class="city" value="0" >Santiago de Chile</option>
+        <option value="2015-1">2015-1</option>
+        <option value="2016-1">2016-1</option>
+        <option value="2016-2">2016-2</option>
+        <option value="2017-1">2017-1</option>
+        <option value="0" class="city">Lima</option>
+        <option value="2015-1">2015-1</option>
+        <option value="2015-1">2015-2</option>
+        <option value="2016-1">2016-1</option>
+        <option value="2016-2">2016-2</option>
+        <option value="2017-1">2017-1</option>
+        <option value="0" class="city">Arequipa</option>
+        <option value="2015-1">2015-1</option>
+        <option value="2016-1">2016-1</option>
+        <option value="2016-2">2016-2</option>
+        <option value="2017-1">2017-1</option>
+        <option value="0" class="city">Ciudad de México</option>
+        <option value="2015-1">2015-1</option>
+        <option value="2016-1">2016-1</option>
+        <option value="2016-2">2016-2</option>
+        <option value="2017-1">2017-1</option>        
+      </select>
+    </header>
+   <!-- Fin header -->
+  <!-- Inicio Main -->
+  <main>
+    <!-- Primera sección-->
+    <section>
+      <div class="data">
+        <h2>Activas</h2>
+        <div class="datos">
+          <p></p>
+          <h6>Número de <br>estudiantes <br> activas</h6>          
+        </div>
+        <div class="datos">
+          <p></p>
+          <h6>% de bajas</h6>
+        </div>
+        <img src="assets/images/bar-graph.png" alt="Gráfico 1">
+      </div>
+      <div class="data">
+        <h2>Logros</h2>
+        <div class="datos">
+          <p></p>
+          <h6>Número de <br>estudiantes <br> que cumplen <br> meta</h6>     
+        </div>
+        <div class="datos">
+          <p></p>
+          <h6>% sobre el total</h6>
+        </div>
+        <img src="assets/images/graph.png" alt="Gráfico 2">
+      </div>
+      <div class="data">
+        <h2>Promedio sprint</h2>
+        <div class="datos">
+          <p></p>
+          <h6>% acumulado NPS</h6>   
+        </div>
+        <div class="datos">
+          <h5>Promotores</h5>
+          <h5>Pasivos</h5>
+          <h5>Detractores</h5>
+        </div>
+        <img src="assets/images/graph.png" alt="Gráfico 3">
+      </div>
+    </section>
+    <!-- Segunda sección-->
+    <section class="section2">
+      <div>
+        <div>
+          <h2></h2>
+          <!-- botón filtro -->
+          <button id="btn">Mostrar</button>
+          <!-- Menú desplegable por generación-->
+          <select id="select">
+            <option value="0">Acumulativas general</option>
+            <option class="" value="0" >Santiago de Chile</option>
+            <option value="2015 - 1">2015-1</option>
+            <option value="2016 - 1">2016-1</option>
+            <option value="2016 - 2">2016-2</option>
+            <option value="2017 - 1">2017-1</option>
+            <option value="0" class="city">Lima</option>
+            <option value="2015 - 1">2015-1</option>
+            <option value="2015 - 1">2015-2</option>
+            <option value="2016 - 1">2016-1</option>
+            <option value="2016 - 2">2016-2</option>
+            <option value="2017 - 1">2017-1</option>
+            <option value="0" class="city">Arequipa</option>
+            <option value="2015 - 1">2015-1</option>
+            <option value="2016 - 1">2016-1</option>
+            <option value="2016 - 2">2016-2</option>
+            <option value="2017 - 1">2017-1</option>
+            <option value="0" class="city">Ciudad de México</option>
+            <option value="2015 - 1">2015-1</option>
+            <option value="2016 - 1">2016-1</option>
+            <option value="2016 - 2">2016-2</option>
+            <option value="2017 - 1">2017-1</option>        
+          </select>
+        </div>
+        <div>
+          <div>
+            <p></p>
+            <h6>Número de estudiantes que cumplen el objetivo</h6>            
+          </div>
+          <div>
+            <p></p>
+            <h6>Porcentaje del total</h6>            
+          </div>
+        </div>      
+      </div>
+      <img src="assets/images/rectangular-graphic.png" alt="Gráfico acumulativo general">
+      <div>      
+      </div>
+      <div>
+        <img src="assets/images/circle-graphic.png" alt="Gráfico circular">
+      </div>      
+    </section>
+    <!-- Tercera sección-->
+    <section class="section3">
+      <div >
+        <div>
+          <h2></h2>
+          <!-- botón filtro -->
+          <button id="btn">Mostrar</button>
+          <!-- Menú desplegable por generación-->
+          <select id="select">
+            <option value="0">Acumulativas general</option>
+            <option class="" value="0" >Santiago de Chile</option>
+            <option value="2015 - 1">2015-1</option>
+            <option value="2016 - 1">2016-1</option>
+            <option value="2016 - 2">2016-2</option>
+            <option value="2017 - 1">2017-1</option>
+            <option value="0" class="city">Lima</option>
+            <option value="2015 - 1">2015-1</option>
+            <option value="2015 - 1">2015-2</option>
+            <option value="2016 - 1">2016-1</option>
+            <option value="2016 - 2">2016-2</option>
+            <option value="2017 - 1">2017-1</option>
+            <option value="0" class="city">Arequipa</option>
+            <option value="2015 - 1">2015-1</option>
+            <option value="2016 - 1">2016-1</option>
+            <option value="2016 - 2">2016-2</option>
+            <option value="2017 - 1">2017-1</option>
+            <option value="0" class="city">Ciudad de México</option>
+            <option value="2015 - 1">2015-1</option>
+            <option value="2016 - 1">2016-1</option>
+            <option value="2016 - 2">2016-2</option>
+            <option value="2017 - 1">2017-1</option>        
+          </select>
+        </div>
+        <div>
+          <div>
+            <p></p>
+            <h6></h6>            
+          </div>
+          <div>
+            <p></p>
+            <h6></h6>            
+          </div>
+        </div>      
+      </div>
+      <img src="assets/images/rectangular-graphic.png" alt="Gráfico acumulativo general">
+      <div>
+      
+      </div>      
+    </section>
+    <!-- Cuarta sección-->
+    <section>
+      <div class="data">
+        <h2>Satisfacción Alumnas</h2>
+        <div class="datos">
+          <p></p>
+          <h6> % de estudiantes satisfechas con la experiencia de Laboratoria.</h6>          
+        </div>
+        <img src="assets/images/graph.png" alt="Gráfico 4">
+      </div>
+      <div class="data">
+        <h2>Evaluación Profesores</h2>
+        <div class="datos">
+          <p></p>
+          <h6>Calificación general de los Profesores (Acumulativo)</h6>
+        </div>
+        <img src="assets/images/graph.png" alt="Gráfico 5">
+      </div>
+      <div class="data">
+        <h2>Evaluación Jedi Master</h2>
+        <div class="datos">
+          <p></p>
+          <h6>Calificación general de los Jedi (Acumulativo)</h6>   
+        </div>
+        <img src="assets/images/graph.png" alt="Gráfico 6">
+      </div>
+   <!-- Contenedor que recibe datos -->
+    <div id="container"></div>
+  </main>
+  <!-- Fin Main -->
 
 		<!-- Base de datos -->
 		<script src="./js/data.js"></script>
