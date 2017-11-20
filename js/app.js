@@ -28,6 +28,7 @@ btn.addEventListener('click', function(){
 		}	
 	};
 
+	/*Sección 1*/
 	var porcentaje = parseInt((bajas * 100) / inscritas);
 	console.log(porcentaje);
 
@@ -38,44 +39,127 @@ btn.addEventListener('click', function(){
 	var parrafoActivas = document.getElementById('uno');
 	uno.innerHTML = activas;
 
-	var notas = data.AQP['2016-2'].students[0].sprints[0].score;
-	var totalHSE = 0;
-	var totalTECH = 0;
-	
-	for (var i = 0; i < notas.length; i++) {
-console.log('hola');
-		if (notas[i].tech == true) {
-			totalTECH = totalTECH + notas[i].tech;			
-		} else if (notas[i].tech == false) {
-			totalHSE++;
+	/*Sacando notas TECH
+	data.AQP['2016-2'].students[0].sprints[0].score.tech;*/
+	var notasTECH = 0;
+	var notasTECHMin = 0;
+	var estudiantes = data.AQP['2016-2'].students
+	for (var i = 0; i < estudiantes.length; i++) {
+		var sprint1 = estudiantes[i].sprints[0].score.tech;
+		var sprint2 = estudiantes[i].sprints[1].score.tech;
+		var sprint3 = estudiantes[i].sprints[2].score.tech;
+		var sprint4 = estudiantes[i].sprints[3].score.tech;
+		var sprint = data.AQP['2016-2'].students[i].sprints;
+
+		/*Cantidad de alumnascon notas Técnicas máximas*/
+		if ((sprint1 + sprint2 + sprint3 + sprint4) / sprint.length > 1260){
+			notasTECH++;
+			
+		/*Cantidad de alumnas con notas Técnicas minimas*/
+		} else if ((sprint1 + sprint2 + sprint3 + sprint4) / sprint.length < 1260){
+			notasTECHMin++;
+			console.log(notasTECHMin);
 		}
+
+		/*Promedio notas Técnicas general*/
+		var sprintTotalTECH = parseInt((sprint1 + sprint2 + sprint3 + sprint4) / sprint.length);
+
+		/*Promedio notas Técnicas máximas porcentaje*/
+		var porcentajeTech = (notasTECH * 100) / estudiantes.length;
+		
 	};
 
-	console.log(totalHSE);
-	console.log(totalTECH)
+	/*Visualización notas Técnico general*/
+	var notasTECHGRAL = document.getElementById('seis');
+	seis.innerHTML = sprintTotalTECH;
+
+	/*Visualización notas Técnico máximas en porcentaje*/
+	var notasTECHMaxPorc = document.getElementById('siete');
+	siete.innerHTML = porcentajeTech;
+
+	/*Visualización notas Técnico máximas en cantidad*/
+	var notasTECHMax = document.getElementById('ocho');
+	ocho.innerHTML = notasTECH;
+
+	/*Visualización notas Técnico minimas en cantidad*/
+	var notasTECHMin = document.getElementById('nueve');
+	nueve.innerHTML = notasTECHMin;  
+
+	/*Sacando notas HSE 
+	data.AQP['2016-2'].students[0].sprints[0].score.hse;*/
+	var notasHSE = 0;
+	var notasHSEMin = 0;
+	var estudiantes = data.AQP['2016-2'].students
+	for (var i = 0; i < estudiantes.length; i++) {
+		var sprint1 = estudiantes[i].sprints[0].score.hse;
+		var sprint2 = estudiantes[i].sprints[1].score.hse;
+		var sprint3 = estudiantes[i].sprints[2].score.hse;
+		var sprint4 = estudiantes[i].sprints[3].score.hse;
+		var sprint = data.AQP['2016-2'].students[i].sprints;
+		
+		/*Cantidad de alumnas con notas HSE máximas*/
+		if (sprint1 + sprint2 + sprint3 + sprint4 / sprint.length > 840){
+			notasHSE++;
+
+		/*Cantidad de alumnas con notas HSE minimas*/
+		} else if (sprint1 + sprint2 + sprint3 + sprint4 / sprint.length < 840){
+			notasHSEMin++;
+		};
+
+		/*Promedio notas HSE general*/
+		var sprintTotalHSE = parseInt((sprint1 + sprint2 + sprint3 + sprint4) / sprint.length);
+
+		/*Promedio porcentaje notas HSE máximas*/
+		var porcentajeHSE = (notasHSE * 100)/estudiantes.length;
+
+		
+	};
+
+  	/*Visualización notas HSE general*/
+  	var notasHSEGRAL = document.getElementById('diez');
+	diez.innerHTML = sprintTotalHSE; 
+
+	/*Visualización notas HSE máximas en porcentaje*/
+	var notasHSEMaxPorc = document.getElementById('once');
+	once.innerHTML = porcentajeHSE;
+
+	/*Visualización notas HSE máximas en cantidad*/
+	var notasHSEMax = document.getElementById('doce');
+	doce.innerHTML = notasHSE;
+
+	/*Visualización notas HSE minimas en cantidad*/
+	var notasHSEMin = document.getElementById('trece');
+	trece.innerHTML = notasHSEMin;  
+
+    /*numero de estudiantes que cumplen meta hse y tech*/
+	var totalMeta = parseInt((notasHSE + notasTECH) /2);
+    var newTotalMeta = document.getElementById('tres');
+    tres.innerHTML = totalMeta;
+	
+    /*porcentaje de metas de notas tech y hse */
+	var TotalMetaPorc = parseInt((porcentajeHSE + porcentajeTech) / 2);
+	var newTotalMetaPorc = document.getElementById('cuatro');
+	cuatro.innerHTML = TotalMetaPorc;
+	
+
+	/*Promedio Profesores
+	data.AQP['2016-2'].ratings[0].teacher*/
+	var notasHSE = 0;
+	var notasHSEMin = 0;
+	var teachers = data.AQP['2016-2'].ratings[0].teacher;
+	for (var i = 0; i < estudiantes.length; i++) {
+		var sprint1 = estudiantes[i].sprints[0].score.hse;
+		var sprint2 = estudiantes[i].sprints[1].score.hse;
+		var sprint3 = estudiantes[i].sprints[2].score.hse;
+		var sprint4 = estudiantes[i].sprints[3].score.hse;
+		var sprint = data.AQP['2016-2'].students[i].sprints;
+
+	/*Promedio Jedi Master
+	data.AQP['2016-2'].ratings[0].jedi*/
+
+
+
 });
-
-
-
-
-
-
-
-
-
-
-
-
-/*
-
-data.AQP['2016-2'].students[0].sprints[0].score.hse;
-
-var notasTECH = 0;
-var notasHSE = 0;
-
-for (var i = .length - 1; i >= 0; i--) {
- 	[i]
-} 
 
 
 /*var students = data.SCL['2016-2'].students;
