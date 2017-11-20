@@ -20,13 +20,7 @@
         <option value="2015-1">2015-1</option>
         <option value="2016-1">2016-1</option>
         <option value="2016-2">2016-2</option>
-        <option value="2017-1">2017-1</option>
-        <option value="0" class="city">Lima</option>
-        <option value="2015-1">2015-1</option>
-        <option value="2015-1">2015-2</option>
-        <option value="2016-1">2016-1</option>
-        <option value="2016-2">2016-2</option>
-        <option value="2017-1">2017-1</option>
+        <option value="2017-1">2017-1</option>     
         <option value="0" class="city">Arequipa</option>
         <option value="2015-1">2015-1</option>
         <option value="2016-1">2016-1</option>
@@ -36,7 +30,13 @@
         <option value="2015-1">2015-1</option>
         <option value="2016-1">2016-1</option>
         <option value="2016-2">2016-2</option>
-        <option value="2017-1">2017-1</option>        
+        <option value="2017-1">2017-1</option>
+        <option value="0" class="city">Lima</option>
+        <option value="2015-1">2015-1</option>
+        <option value="2015-1">2015-2</option>
+        <option value="2016-1">2016-1</option>
+        <option value="2016-2">2016-2</option>
+        <option value="2017-1">2017-1</option>                   
       </select>
     </header>
    <!-- Fin header -->
@@ -47,11 +47,13 @@
       <div class="data">
         <h2>Activas</h2>
         <div class="datos overAling" >
-          <p id="uno">73</p>
+          <!--Contenedor datos alumnas activas-->
+          <p id="uno"></p>
           <h6>Número de estudiantes activas</h6>  
         </div>
         <div class="datos overAling">
-          <p id="dos">88</p>
+          <!--Contenedor datos alumnas inactivas-->
+          <p id="dos"></p>
           <h6>% de bajas</h6>
         </div>
         <img src="assets/images/bar-graph.png" alt="Gráfico 1">
@@ -59,24 +61,30 @@
       <div class="data">
         <h2>Logros</h2>
         <div class="datos overAling">
+          <!--Contenedor datos alumnas que cumplen la meta general(sobre 70%)-->
           <p id="tres"></p>
           <h6>Número de estudiantes que cumplen meta</h6>     
         </div>
         <div class="datos overAling">
+          <!--Contenedor datos alumnas que cumplen la meta en porcentaje (Porcentaje en relación al total de alumnas)-->
           <p id="cuatro"></p>
           <h6>% sobre el total</h6>
         </div>
         <img src="assets/images/graph.png" alt="Gráfico 2">
       </div>
       <div class="data">
-        <h2>Promedio sprint</h2>
+        <h2>Puntaje Promotores</h2>
         <div class="datos overAling">
+          <!--Contenedor datos promotores - detractores-->
           <p id="cinco"></p>
           <h6>% acumulado NPS</h6>   
         </div>
         <div class="datos overAling">
+          <!--Contenedor datos promotores-->
           <h6><p id="one"></p>Promotores</h6>
+          <!--Contenedor datos intermedios-->
           <h6><p id="two"></p>Pasivos</h6>
+          <!--Contenedor datos detractores-->
           <h6><p id="three"></p>Detractores</h6>
         </div>
         <img src="assets/images/graph.png" alt="Gráfico 3">
@@ -89,7 +97,7 @@
           <h2 class="aling">Notas técnicas</h2>
           <!-- botón filtro -->
           <button id="btn">Mostrar</button>
-          <!-- Menú desplegable por generación-->
+          <!-- Menú desplegable por sprint-->
           <select id="select2">
             <option value="0">Total acumulado...</option>
             <option class="city" value="0" >Notas común</option>
@@ -110,10 +118,12 @@
           </select>          
         </div>
         <div class="aling overAling">
+          <!--Contenedor números alumnas que cumplen con notas técnicas-->
           <p id="seis"></p>
           <h6>Estudiantes que cumplen el objetivo</h6>
         </div>
         <div class="aling overAling">
+          <!--Contenedor porcentaje alumnas que cumplen con notas técnicas-->
           <p id="siete"></p>
           <h6>% del total</h6>
         </div>
@@ -121,7 +131,9 @@
       </div>
       <div class="width2">
         <img src="assets/images/circle-graphic.png" alt="gráfico de circulo">
+        <!--Contenedor números alumnas que cumplen con notas técnicas-->
         <h6 id="green"><p id="ocho"></p>Estudiantes que cumplen el objetivo</h6>
+        <!--Contenedor números alumnas que no cumplen con notas técnicas-->
         <h6 id="red"><p id="nueve"></p>Estudiantes que no cumplen el objetivo</h6>
       </div>
     </section>
@@ -132,7 +144,7 @@
           <h2 class="aling">Notas Profesionales</h2>
           <!-- botón filtro -->
           <button id="btn">Mostrar</button>
-          <!-- Menú desplegable por generación-->
+          <!-- Menú desplegable por sprint-->
           <select id="select2">
             <option value="0">Total acumulado...</option>
             <option class="city" value="0" >HSE</option>
@@ -143,12 +155,14 @@
           </select>          
         </div>
         <div class="aling overAling">
+          <!--Contenedor números alumnas que cumplen con notas HSE-->
           <p id="diez"></p>
           <h6>Clase general</h6>
         </div>
         <div class="aling overAling">
+          <!--Contenedor porcentaje alumnas que cumplen con notas HSE-->
           <p id="once"></p>
-          <h6>Número de estudiantes que cumplen el objetivo</h6>
+          <h6>% de estudiantes que cumplen el objetivo</h6>
         </div>
         <img src="assets/images/rectangular-graphic.png" alt="gráfico de barras">
       </div>
@@ -163,6 +177,7 @@
       <div class="data">
         <h2>Satisfacción Alumnas</h2>
         <div class="datos overAling">
+          <!--Contenedor porcentaje de satisfacción de las alumnas con Laboratoria-->
           <p id="catorce"></p>
           <h6> % de estudiantes satisfechas con Laboratoria.</h6>          
         </div>
@@ -171,6 +186,7 @@
       <div class="data">
         <h2>Evaluación Profesores</h2>
         <div class="datos overAling">
+          <!--Contenedor evaluación Profesores-->
           <p id="quince"></p>
           <h6>Calificación general de los Profesores (Acumulativo)</h6>
         </div>
@@ -179,12 +195,13 @@
       <div class="data">
         <h2>Evaluación Jedi Master</h2>
         <div class="datos overAling">
+          <!--Contenedor evaluación Master Jedi-->
           <p id="dieciseis"></p>
           <h6>Calificación general de los Jedi (Acumulativo)</h6>   
         </div>
         <img src="assets/images/graph.png" alt="Gráfico 6">
       </div>
-   <!-- Contenedor que recibe datos -->
+   <!-- Contenedor que recibe datos de la función principal-->
     <div id="container"></div>
   </main>
   <!-- Fin Main -->
