@@ -7,13 +7,38 @@ console.log(data);
 
 /*Función de lista desplegable*/
 var btn = document.getElementById('btn1');
-var cont = document.getElementById('uno');
+var cont = 0;
 btn.addEventListener('click', function(){
 	var selection = document.getElementById('select').value;
 	if (selection == '0') {
 		alert('Elige una generación');
 		return false;
-	} cont.innerHTML = '<p> 30 </p>';
+	} 
+	var estudiantes = data.SCL['2016-2'].students;
+    var inscritas = 0;
+    var activas = 0;
+    var bajas = 0;
+
+for (var i = 0; i < estudiantes.length; i++) {
+	inscritas++;
+	if (estudiantes[i].active == true) {
+		activas++;
+	} else if (estudiantes[i].active == false){
+		bajas++;
+	}	
+}
+
+
+var porcentaje = parseInt((bajas * 100) / inscritas);
+console.log(porcentaje);
+
+/*Mostrando en HTML cantidad de alumnas total, activas e inactivas*/
+var parrafoBajas = document.getElementById('dos');
+dos.innerHTML = porcentaje;
+
+var parrafoActivas = document.getElementById('uno');
+uno.innerHTML = activas;
+
 	
 });
 
@@ -25,22 +50,6 @@ for (var i = 0; i < students.length; i++) {
 console.log(counter);
 
 /*sacando datos de alumnas total, activas e inactivas*/
-var estudiantes = data.SCL['2016-2'].students;
-var inscritas = 0;
-var activas = 0;
-var bajas = 0;
 
-for (var i = 0; i < estudiantes.length; i++) {
-	inscritas++;
-	if (estudiantes[i].active == true) {
-		activas++;
-	} else if (estudiantes[i].active == false){
-		bajas++;
-	}	
-}
 
-console.log(activas);
-console.log(bajas);
 
-var porcentaje = parseInt((bajas * 100) / inscritas);
-console.log(porcentaje);
