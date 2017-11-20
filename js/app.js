@@ -98,11 +98,11 @@ btn.addEventListener('click', function(){
 		var sprint = data.AQP['2016-2'].students[i].sprints;
 		
 		/*Cantidad de alumnas con notas HSE máximas*/
-		if (sprint1 + sprint2 + sprint3 + sprint4 / sprint.length > 840){
+		if ((sprint1 + sprint2 + sprint3 + sprint4) / sprint.length > 840){
 			notasHSE++;
 
 		/*Cantidad de alumnas con notas HSE minimas*/
-		} else if (sprint1 + sprint2 + sprint3 + sprint4 / sprint.length < 840){
+		} else if ((sprint1 + sprint2 + sprint3 + sprint4) / sprint.length < 840){
 			notasHSEMin++;
 		};
 
@@ -110,7 +110,7 @@ btn.addEventListener('click', function(){
 		var sprintTotalHSE = parseInt((sprint1 + sprint2 + sprint3 + sprint4) / sprint.length);
 
 		/*Promedio porcentaje notas HSE máximas*/
-		var porcentajeHSE = (notasHSE * 100)/estudiantes.length;
+		var porcentajeHSE = parseInt((notasHSE * 100)/estudiantes.length);
 
 		
 	};
@@ -144,16 +144,25 @@ btn.addEventListener('click', function(){
 
 	/*Promedio Profesores
 	data.AQP['2016-2'].ratings[0].teacher*/
-	var notasHSE = 0;
-	var notasHSEMin = 0;
-	var teachers = data.AQP['2016-2'].ratings[0].teacher;
-	for (var i = 0; i < estudiantes.length; i++) {
-		var sprint1 = estudiantes[i].sprints[0].score.hse;
-		var sprint2 = estudiantes[i].sprints[1].score.hse;
-		var sprint3 = estudiantes[i].sprints[2].score.hse;
-		var sprint4 = estudiantes[i].sprints[3].score.hse;
-		var sprint = data.AQP['2016-2'].students[i].sprints;
-
+	var notasTeacher = 0;
+	var dataTeachers = data.AQP['2016-2'].ratings;
+	console.log(dataTeachers);
+	for (var i = 0; i < dataTeachers.length; i++) {
+		var teacher1 = dataTeachers[0].teacher;
+		console.log(teacher1);
+		var teacher2 = dataTeachers[1].teacher;
+		console.log(teacher2);
+		var teacher3 = dataTeachers[2].teacher;
+		console.log(teacher3);
+		var teacher4 = dataTeachers[3].teacher;
+		console.log(teacher4);
+		var profesor = data.AQP['2016-2'].ratings.teacher;
+		dataTeachers++;
+			
+	} if ((teacher1 + teacher2 + teacher3 + teacher4) / profesor.length == true) {
+		notasTeachers++;	
+	}
+	console.log(notasTeacher);
 	/*Promedio Jedi Master
 	data.AQP['2016-2'].ratings[0].jedi*/
 
