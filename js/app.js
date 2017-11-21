@@ -148,6 +148,18 @@ btn.addEventListener('click', function(){
 	var dataTeachers = data.AQP['2016-2'].ratings;
 	console.log(dataTeachers);
 	for (var i = 0; i < dataTeachers.length; i++) {
+		var profesor = dataTeachers[i].teacher;
+		console.log(profesor);
+	};
+	var promedioTeacher = document.getElementById('quince');
+	quince.innerHTML = notasTeacher;
+
+
+	/*
+	var notasTeacher = 0;
+	var dataTeachers = data.AQP['2016-2'].ratings;
+	console.log(dataTeachers);
+	for (var i = 0; i < dataTeachers.length; i++) {
 		var teacher1 = dataTeachers[0].teacher;
 		console.log(teacher1);
 		var teacher2 = dataTeachers[1].teacher;
@@ -161,10 +173,18 @@ btn.addEventListener('click', function(){
 			
 	} if ((teacher1 + teacher2 + teacher3 + teacher4) / profesor.length == true) {
 		notasTeachers++;	
-	}
-	console.log(notasTeacher);
+	}*/
 	/*Promedio Jedi Master
 	data.AQP['2016-2'].ratings[0].jedi*/
+	var notasJM = 0;
+	var dataJM = data.AQP['2016-2'].ratings;
+	console.log(dataJM);
+	for (var i = 0; i < dataJM.length; i++) {
+		var jediMaster = dataJM[i].jedi;
+		console.log(jediMaster);
+	};
+	var promedioJM = document.getElementById('dieciseis');
+	dieciseis.innerHTML = notasJM;
 
 
 
