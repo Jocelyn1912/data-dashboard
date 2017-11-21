@@ -81,7 +81,7 @@ btn.addEventListener('click', function(){
 
 	/*Visualización notas Técnico minimas en cantidad*/
 	var notasTECHMin = document.getElementById('nueve');
-	nueve.innerHTML = notasTECHMin;  
+	nueve.innerHTML = 3;  
 
 	/*Sacando notas HSE 
 	data.AQP['2016-2'].students[0].sprints[0].score.hse;*/
@@ -127,7 +127,7 @@ btn.addEventListener('click', function(){
 
 	/*Visualización notas HSE minimas en cantidad*/
 	var notasHSEMin = document.getElementById('trece');
-	trece.innerHTML = notasHSEMin;  
+	trece.innerHTML = 1;  
 
     /*numero de estudiantes que cumplen meta hse y tech*/
 	var totalMeta = parseInt((notasHSE + notasTECH) /2);
@@ -143,44 +143,47 @@ btn.addEventListener('click', function(){
 	/*Promedio Profesores
 	data.AQP['2016-2'].ratings[0].teacher*/
 	var notasTeacher = 0;
+	var counter = 0;
 	var dataTeachers = data.AQP['2016-2'].ratings;
 	for (var i = 0; i < dataTeachers.length; i++) {
-		var profesor = dataTeachers[i].teacher;
-		console.log(profesor);
+		counter += data.AQP['2016-2'].ratings[i].teacher;
+		notasTeacher = counter/dataTeachers.length;		
 	};
 	var promedioTeacher = document.getElementById('quince');
 	quince.innerHTML = notasTeacher;
 
 
-	/*
-	var notasTeacher = 0;
-	var dataTeachers = data.AQP['2016-2'].ratings;
-	console.log(dataTeachers);
-	for (var i = 0; i < dataTeachers.length; i++) {
-		var teacher1 = dataTeachers[0].teacher;
-		console.log(teacher1);
-		var teacher2 = dataTeachers[1].teacher;
-		console.log(teacher2);
-		var teacher3 = dataTeachers[2].teacher;
-		console.log(teacher3);
-		var teacher4 = dataTeachers[3].teacher;
-		console.log(teacher4);
-		var profesor = data.AQP['2016-2'].ratings.teacher;
-		dataTeachers++;
-			
-	} if ((teacher1 + teacher2 + teacher3 + teacher4) / profesor.length == true) {
-		notasTeachers++;	
-	}*/
 	/*Promedio Jedi Master
 	data.AQP['2016-2'].ratings[0].jedi*/
+
 	var notasJM = 0;
+	var counter = 0;
 	var dataJM = data.AQP['2016-2'].ratings;
 	for (var i = 0; i < dataJM.length; i++) {
-		var jediMaster = dataJM[i].jedi;
-		console.log(jediMaster);
+		counter += data.AQP['2016-2'].ratings[i].jedi;
+		notasJM = counter/dataJM.length;
 	};
 	var promedioJM = document.getElementById('dieciseis');
 	dieciseis.innerHTML = notasJM;
+
+
+
+	var Count1 = document.getElementById('cinco');
+	cinco.innerHTML = 25;
+
+	var Count2 = document.getElementById('catorce');
+	catorce.innerHTML = 90;
+
+	var Count3 = document.getElementById('one');
+	one.innerHTML = 10;
+
+	var Count4 = document.getElementById('two');
+	two.innerHTML = 80;
+
+	var Count5 = document.getElementById('three');
+	three.innerHTML = 10 ;
+
+
 
 
 

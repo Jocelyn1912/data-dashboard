@@ -7,7 +7,7 @@
 }
 
 body{
-    background-color: #F1EBEB;
+    background-color: #FACF7C;
 }
 
 header{
@@ -16,6 +16,7 @@ header{
     background-color: white;
     border-bottom: 2px solid black;
 }
+
 
 /*Logo Laboratoria*/
 #logo{
@@ -29,15 +30,15 @@ header{
 }
 /*Botón mostrar*/
 
-header #btn1{
+header #btn1, #traduc{
     margin-right: 100px;
 }
 
-header #logo, #select, #btn1{
+header #logo, #select, #btn1, #traduc{
     display: inline-block;
 }
 
-header #select, #btn1{
+header #select, #btn1, #traduc{
     float: right;
     font-size: 18px; 
     margin-top: 50px;
