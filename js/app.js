@@ -30,8 +30,7 @@ btn.addEventListener('click', function(){
 
 	/*Sección 1*/
 	var porcentaje = parseInt((bajas * 100) / inscritas);
-	console.log(porcentaje);
-
+	
 	/*Mostrando en HTML cantidad de alumnas total, activas e inactivas*/
 	var parrafoBajas = document.getElementById('dos');
 	dos.innerHTML = porcentaje;
@@ -58,7 +57,6 @@ btn.addEventListener('click', function(){
 		/*Cantidad de alumnas con notas Técnicas minimas*/
 		} else if ((sprint1 + sprint2 + sprint3 + sprint4) / sprint.length < 1260){
 			notasTECHMin++;
-			console.log(notasTECHMin);
 		}
 
 		/*Promedio notas Técnicas general*/
@@ -146,7 +144,6 @@ btn.addEventListener('click', function(){
 	data.AQP['2016-2'].ratings[0].teacher*/
 	var notasTeacher = 0;
 	var dataTeachers = data.AQP['2016-2'].ratings;
-	console.log(dataTeachers);
 	for (var i = 0; i < dataTeachers.length; i++) {
 		var profesor = dataTeachers[i].teacher;
 		console.log(profesor);
@@ -178,7 +175,6 @@ btn.addEventListener('click', function(){
 	data.AQP['2016-2'].ratings[0].jedi*/
 	var notasJM = 0;
 	var dataJM = data.AQP['2016-2'].ratings;
-	console.log(dataJM);
 	for (var i = 0; i < dataJM.length; i++) {
 		var jediMaster = dataJM[i].jedi;
 		console.log(jediMaster);

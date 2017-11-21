@@ -8,18 +8,21 @@
 
 ## Flujo de trabajo
 
-1. Debes realizar un [**fork**](https://gist.github.com/ivandevp/1de47ae69a5e139a6622d78c882e1f74)
-   de este repositorio.
+funcion principal:
+click del boton, en este caso de arequipa 2016-2, donde al hacer click en ea cuidad y generacion va a empezar a cargar los datos correspondientes.
 
-2. Luego deberás **clonar** tu fork en tu máquina. Recuerda que el comando a usar
-   es `git clone` y su estructura normalmente se ve así:
+Creamos una serie de variables, para alacenar los datos de nuestro primer for, donde calculamos las alumnas activas y su porcentajes. Tambien por este metodo calculamos las bajas.
 
-   ```bash
-   git clone https://github.com/<nombre-de-usuario>/freelancer.git
-   ```
+Siguiente paso:
+crear varibles de notas tecnicas (por sprint)  y las notas tecnicas minimas para saber que cantidad de alumnas consiguieron esas notas. Entonces con el for, intineramos cada sprint para luego sumamenos cada una de ellas y calculamos su longitud y colocamos que sea mayor  a la meta. 
+Cuando es menos, ahi sacamos el porcentaje que no cumple la meta en notas tecnicas(no funciona esa parte hay que reveerla).
+el parsenint es para redondear el porcentaje.
 
-3. Cuando hayas terminado tu producto, envía un Pull Request a este repositorio
-   (puedes solicitar apoyo de tus profes para este paso).
 
-> Nota: No olvides que es una buena práctica describir tu proyecto en este
-> archivo `README.md` y también desplegar tu web a Github Pages :smiley:.
+La misma metodologia y logica usamos para las notas hse.
+
+Cada uno de estos pasos, los enlazamos con la funcion del boton (funcion principal.) Con sus respectivas variables y llamando al id del html de cada contenedor.
+Añadir comentario Contraer
+
+
+
